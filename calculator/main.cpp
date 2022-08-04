@@ -1,14 +1,16 @@
-//
-//  main.cpp
-//  calculator
-//
-//  Created by 陈琦 on 8/4/22.
-//
-
 #include <iostream>
-
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+#include <stack>
+using namespace std;
+int getPriority(string op){
+    if (op=="^") {
+        return 3;
+    }else if (op=="*"||op=="/"){
+        return 2;
+    }else{
+        return 1;
+    }
+}
+int main() {
+    
     return 0;
 }
