@@ -50,7 +50,7 @@ int main() {
     }
     string be;
     while (!s2.empty()) {
-        be.insert(0, s2.top);
+        be.insert(0, s2.top());
         s2.pop();
     }
     return 0;
