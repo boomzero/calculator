@@ -57,6 +57,8 @@ int main() {
     string be;
     while (!s2.empty()) {
         be.insert(0, s2.top());
+        if (s2.size()!=1)
+            be.insert(0, " ");
         s2.pop();
     }
     cout<<be<<endl;
