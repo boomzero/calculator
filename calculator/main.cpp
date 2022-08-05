@@ -18,11 +18,13 @@ int main() {
     cin>>expression;
     string temp;
     for (int i=0; i<expression.length(); i++) {
+        temp="";
         if (isdigit(expression[i])) {//This is a number
             while (isdigit(expression[i])) {
                 temp.push_back(expression[i]);
                 i++;
             }
+            i--;
             s2.push(temp);
         }else{//This is an operator
             if (s1.empty()||s1.top()=="(") {
@@ -39,7 +41,7 @@ int main() {
                     }
                     s1.pop();
                 }else{
-                    while (!(getPriority(temp)>getPriority(s1.top()))&&(!s1.empty())) {
+                    while ((!s1.empty())&&!(getPriority(temp)>getPriority(s1.top()))) {
                         s2.push(s1.top());
                         s1.pop();
                     }
@@ -47,6 +49,10 @@ int main() {
                 }
             }
         }
+    }
+    while (!s1.empty()) {
+        s2.push(s1.top());
+        s1.pop();
     }
     string be;
     while (!s2.empty()) {
