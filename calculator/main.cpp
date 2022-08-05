@@ -29,7 +29,7 @@ int main() {
             i--;
             s2.push(temp);
         }else{//This is an operator
-            if ((s1.empty()&&(expression[i]!=')'))||s1.top()=="(") {
+            if (s1.empty()||(s1.top()=="("&&(expression[i]!=')'))) {
                 temp="";
                 temp.push_back(expression[i]);
                 s1.push(temp);
