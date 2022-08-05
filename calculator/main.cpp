@@ -84,7 +84,7 @@ int main() {
             }else if (be[i]=='-') cs.push(to_string(val1-val2));
             else if (be[i]=='*') cs.push(to_string(val1*val2));
             else if (be[i]=='/') cs.push(to_string(val1*val2));
-            else cs.push(to_string(pow(val1, val2)));
+            else cs.push(to_string(round(pow(val1, val2))));
             i++;
         }
     }
