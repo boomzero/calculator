@@ -59,5 +59,6 @@ int main() {
         be.insert(0, s2.top());
         s2.pop();
     }
+    cout<<be<<endl;
     return 0;
 }
