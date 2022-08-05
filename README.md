@@ -1,6 +1,6 @@
 # Calculator
 A calculator that calculates the value of a expression
-# Example
+## Example
 Example Input:
 ```
 (1+2)*3-4
