@@ -1,11 +1,11 @@
 # Calculator
 A calculator that calculates the value of a expression
 ## Example
-Example Input:
+Sample Input:
 ```
 (1+2)*3-4
 ```
-Example Output:
+Sample Output:
 ```
 5
 ```
