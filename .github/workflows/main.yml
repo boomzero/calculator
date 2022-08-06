@@ -31,6 +31,8 @@ jobs:
           g++ -o out main.cpp
       - name : Basic Test
         run: |
+          cd calculator
+          g++ -o out main.cpp
           echo 1+1 | ./out
           echo (1+1) | ./out
           echo 1*1 | ./out
@@ -38,6 +40,8 @@ jobs:
           echo 1-2 | ./out
       - name : Advanced Test
         run: |
+          cd calculator
+          g++ -o out main.cpp
           echo ((1+1)) | ./out
           echo (1+1)*2 | ./out
           echo (1+1)^2 | ./out
