@@ -30,3 +30,17 @@ jobs:
         run: |
           cd calculator
           g++ -o calculator main.cpp
+      - name : Basic Test
+        run: |
+          echo 1+1 | ./calculator
+          echo (1+1) | ./calculator
+          echo 1*1 | ./calculator
+          echo 3/2 | ./calculator
+          echo 1-2 | ./calculator
+      - name : Advanced Test
+        run: |
+          echo ((1+1)) | ./calculator
+          echo (1+1)*2 | ./calculator
+          echo (1+1)^2 | ./calculator
+          echo ((2-1)*2+1)^2 | ./calculator
+          echo (((2-1)*2+1)^2-1)/2 | ./calculator
