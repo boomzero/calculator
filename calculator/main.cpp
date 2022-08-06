@@ -30,7 +30,7 @@ int main() {
             s2.push(temp);
         }else{//This is an operator
             if (s1.empty()||(s1.top()=="(")) {
-                if ((expression[i]!=')')) {
+                if ((expression[i]!=')')&&!s1.empty()) {
                     s1.pop();
                 }else{
                     temp="";
