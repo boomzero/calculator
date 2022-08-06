@@ -9,5 +9,3 @@ Sample Output:
 ```
 5
 ```
-## Known issues
-https://github.com/Thomas311926/calculator/issues/3
