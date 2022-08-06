@@ -49,7 +49,7 @@ int main() {
                     }
                     s1.pop();
                 }else{
-                    while ((!s1.empty())&&!(getPriority(temp)>getPriority(s1.top()))) {
+                    while ((!s1.empty())&&s1.top()!="("&&!(getPriority(temp)>getPriority(s1.top()))) {
                         s2.push(s1.top());
                         s1.pop();
                     }
