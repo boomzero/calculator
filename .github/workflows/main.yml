@@ -33,17 +33,17 @@ jobs:
         run: |
           cd calculator
           g++ -o out main.cpp
-          echo 1+1 | ./out
-          echo (1+1) | ./out
-          echo 1*1 | ./out
-          echo 3/2 | ./out
-          echo 1-2 | ./out
+          echo "1+1" | ./out
+          echo "(1+1)" | ./out
+          echo "1*1" | ./out
+          echo "3/2" | ./out
+          echo "1-2" | ./out
       - name : Advanced Test
         run: |
           cd calculator
           g++ -o out main.cpp
-          echo ((1+1)) | ./out
-          echo (1+1)*2 | ./out
-          echo (1+1)^2 | ./out
-          echo ((2-1)*2+1)^2 | ../out
-          echo (((2-1)*2+1)^2-1)/2 | ./out
+          echo "((1+1))" | ./out
+          echo "(1+1)*2" | ./out
+          echo "(1+1)^2" | ./out
+          echo "((2-1)*2+1)^2" | ../out
+          echo "(((2-1)*2+1)^2-1)/2" | ./out
