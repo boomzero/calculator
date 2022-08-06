@@ -40,7 +40,9 @@ int main() {
             }else{
                 temp="";
                 temp.push_back(expression[i]);
-                if (temp==")") {
+                if (temp=="(") {
+                    s1.push("(");
+                }else if (temp==")") {
                     while (s1.top()!="(") {
                         s2.push(s1.top());
                         s1.pop();
