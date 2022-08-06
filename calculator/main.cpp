@@ -9,9 +9,10 @@ int getPriority(string op){
         return 3;
     }else if (op=="*"||op=="/"){
         return 2;
-    }else{
+    }else if (op=="+"||op=="-"){
         return 1;
     }
+    return 0;
 }
 int main() {
     stack<string> s1;
