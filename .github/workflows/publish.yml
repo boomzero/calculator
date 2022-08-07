@@ -6,7 +6,7 @@ on:
       - '*'
 jobs:
   build-linux:
-    name: Publish binaries on Linux
+    name: Publish Linux Binaries
     runs-on: ubuntu-latest
 
     steps:
@@ -24,7 +24,7 @@ jobs:
         tag: ${{ github.ref }}
         overwrite: true
   build-macos:
-    name: Publish binaries on macOS
+    name: Publish macOS binaries
     runs-on: macos-12
 
     steps:
@@ -42,7 +42,7 @@ jobs:
         tag: ${{ github.ref }}
         overwrite: true
   build-windows:
-    name: Publish binaries on Windows
+    name: Publish Windows binaries
     runs-on: windows-latest
 
     steps:
