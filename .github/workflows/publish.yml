@@ -6,8 +6,8 @@ on:
       - '*'
   workflow_dispatch:
 jobs:
-  build:
-    name: Publish binaries
+  build-linux:
+    name: Publish binaries on Linux
     runs-on: ubuntu-latest
 
     steps:
@@ -22,5 +22,39 @@ jobs:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         file: calc
         asset_name: linux-amd64
+        tag: ${{ github.ref }}
+        overwrite: false
+  build-macos:
+    name: Publish binaries on macOS
+    runs-on: macos-12
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build
+      run: |
+        cd calculator
+        g++ -o ../calc main.cpp
+    - name: Upload binaries to release
+      uses: svenstaro/upload-release-action@v2
+      with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        file: calc
+        asset_name: darwin-amd64
+        tag: ${{ github.ref }}
+        overwrite: false
+  build-windows:
+    name: Publish binaries on Windows
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build
+      run: g++.exe -o ./calc calculator/main.cpp
+    - name: Upload binaries to release
+      uses: svenstaro/upload-release-action@v2
+      with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        file: calc
+        asset_name: windows-amd64.exe
         tag: ${{ github.ref }}
         overwrite: false
