@@ -23,7 +23,7 @@ jobs:
         file: calc
         asset_name: linux-amd64
         tag: ${{ github.ref }}
-        overwrite: false
+        overwrite: true
   build-macos:
     name: Publish binaries on macOS
     runs-on: macos-12
@@ -41,7 +41,7 @@ jobs:
         file: calc
         asset_name: darwin-amd64
         tag: ${{ github.ref }}
-        overwrite: false
+        overwrite: true
   build-windows:
     name: Publish binaries on Windows
     runs-on: windows-latest
@@ -57,4 +57,4 @@ jobs:
         file: calc.exe
         asset_name: windows-amd64.exe
         tag: ${{ github.ref }}
-        overwrite: false
+        overwrite: true
