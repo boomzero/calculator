@@ -19,6 +19,9 @@ int main() {
     stack<string> s2;
     string expression;
     cin>>expression;
+    if (expression[0]=='-') {
+        expression.insert(0, "0");
+    }
     string temp;
     for (int i=0; i<expression.length(); i++) {
         temp="";
