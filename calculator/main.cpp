@@ -22,6 +22,11 @@ int main() {
     if (expression[0]=='-') {
         expression.insert(0, "0");
     }
+    for (int i=1; i<expression.length(); i++) {
+        if (expression[i]=='-'&&expression[i-1]=='(') {
+            expression.insert(i, "0");
+        }
+    }
     string temp;
     for (int i=0; i<expression.length(); i++) {
         temp="";
