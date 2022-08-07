@@ -1,0 +1,24 @@
+name: Publish
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  build:
+    name: Publish binaries
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build
+      run: g++ -o calc ./caluculator/main.cpp
+    - name: Upload binaries to release
+      uses: svenstaro/upload-release-action@v2
+      with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        file: calc
+        asset_name: linux-amd64
+        tag: ${{ github.ref }}
+        overwrite: false
