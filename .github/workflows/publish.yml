@@ -48,7 +48,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build
-      run: g++.exe -o ./calc.exe -O1 -static-libgcc -static-libstdc++ -lpthread -std=c++11 -pthread calculator/main.cpp
+      run: g++.exe -o ./calc.exe -O1 -static calculator/main.cpp
     - name: Upload binaries to release
       uses: svenstaro/upload-release-action@v2
       with:
