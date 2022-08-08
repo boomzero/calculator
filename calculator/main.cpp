@@ -15,6 +15,7 @@ If not, see <https://www.gnu.org/licenses/>.
 #include <string>
 #include <cmath>
 #include <cctype>
+#include <cstdlib>
 using namespace std;
 int getPriority(string op){
     if (op=="^") {
@@ -115,6 +116,9 @@ int main() {
             i++;
         }
     }
+#ifdef __WIN32
+    system("pause");
+#endif
     cout<<cs.top()<<endl;
     return 0;
 }
