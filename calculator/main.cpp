@@ -117,7 +117,8 @@ int main() {
         }
     }
 #ifdef __WIN32
-    system("pause");
+    cout<<"Press enter to continue..."<<endl;
+    cin.get();
 #endif
     cout<<cs.top()<<endl;
     return 0;
