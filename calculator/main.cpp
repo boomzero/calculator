@@ -91,6 +91,19 @@ int main() {
             be.insert(0, " ");
         s2.pop();
     }
+    bool sn=true;
+    for (int i=0; i<be.length(); i++) {
+        if (!isdigit(be[i])) {
+            sn=false;
+        }
+    }
+    if (sn) {
+        cout<<be<<endl;
+#ifdef __WIN32
+        system("pause");
+#endif
+        return 0;
+    }
     stack<string> cs;
     string temp2;
     long long val1=0,val2=0;
@@ -116,10 +129,9 @@ int main() {
             i++;
         }
     }
-#ifdef __WIN32
-    cout<<"Press enter to continue..."<<endl;
-    cin.get();
-#endif
     cout<<cs.top()<<endl;
+#ifdef __WIN32
+    system("pause");
+#endif
     return 0;
 }
