@@ -16,7 +16,14 @@ If not, see <https://www.gnu.org/licenses/>.
 #include <cmath>
 #include <cctype>
 #include <cstdlib>
+#include <sstream>
+#include <iomanip>
 using namespace std;
+string ldtos(long double val){
+    std::stringstream ss;
+    ss << std::setprecision(15) << val;
+    return ss.str();
+}
 int getPriority(string op){
     if (op=="^") {
         return 3;
@@ -121,11 +128,11 @@ int main() {
             val1=stold(cs.top());
             cs.pop();
             if (be[i]=='+') {
-                cs.push(to_string(val1+val2));
-            }else if (be[i]=='-') cs.push(to_string(val1-val2));
-            else if (be[i]=='*') cs.push(to_string(val1*val2));
-            else if (be[i]=='/') cs.push(to_string((long double)val1/val2));
-            else cs.push(to_string((long double)pow(val1, val2)));
+                cs.push(ldtos(val1+val2));
+            }else if (be[i]=='-') cs.push(ldtos(val1-val2));
+            else if (be[i]=='*') cs.push(ldtos(val1*val2));
+            else if (be[i]=='/') cs.push(ldtos((long double)val1/val2));
+            else cs.push(ldtos((long double)pow(val1, val2)));
             i++;
         }
     }
