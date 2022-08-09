@@ -16,7 +16,14 @@ If not, see <https://www.gnu.org/licenses/>.
 #include <cmath>
 #include <cctype>
 #include <cstdlib>
+#include <sstream>
+#include <iomanip>
 using namespace std;
+string ldtos(long double val){
+    std::stringstream ss;
+    ss << std::setprecision(15) << val;
+    return ss.str();
+}
 int getPriority(string op){
     if (op=="^") {
         return 3;
@@ -44,7 +51,7 @@ int main() {
     for (int i=0; i<expression.length(); i++) {
         temp="";
         if (isdigit(expression[i])) {//This is a number
-            while (isdigit(expression[i])) {
+            while (isdigit(expression[i])||expression[i]=='.') {
                 temp.push_back(expression[i]);
                 i++;
             }
@@ -93,7 +100,7 @@ int main() {
     }
     bool sn=true;
     for (int i=0; i<be.length(); i++) {
-        if (!isdigit(be[i])) {
+        if (!isdigit(be[i])&&be[i]!='.') {
             sn=false;
         }
     }
@@ -106,7 +113,7 @@ int main() {
     }
     stack<string> cs;
     string temp2;
-    long long val1=0,val2=0;
+    long double val1=0,val2=0;
     for (int i=0; i<be.length(); i++) {
         temp2="";
         if (isdigit(be[i])) {
@@ -116,16 +123,16 @@ int main() {
             }
             cs.push(temp2);
         }else{
-            val2=stoi(cs.top());
+            val2=stold(cs.top());
             cs.pop();
-            val1=stoi(cs.top());
+            val1=stold(cs.top());
             cs.pop();
             if (be[i]=='+') {
-                cs.push(to_string(val1+val2));
-            }else if (be[i]=='-') cs.push(to_string(val1-val2));
-            else if (be[i]=='*') cs.push(to_string(val1*val2));
-            else if (be[i]=='/') cs.push(to_string((double)val1/val2));
-            else cs.push(to_string(pow(val1, val2)));
+                cs.push(ldtos(val1+val2));
+            }else if (be[i]=='-') cs.push(ldtos(val1-val2));
+            else if (be[i]=='*') cs.push(ldtos(val1*val2));
+            else if (be[i]=='/') cs.push(ldtos((long double)val1/val2));
+            else cs.push(ldtos((long double)pow(val1, val2)));
             i++;
         }
     }
