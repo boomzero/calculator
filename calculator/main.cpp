@@ -44,7 +44,7 @@ int main() {
     for (int i=0; i<expression.length(); i++) {
         temp="";
         if (isdigit(expression[i])) {//This is a number
-            while (isdigit(expression[i])) {
+            while (isdigit(expression[i])||expression[i]=='.') {
                 temp.push_back(expression[i]);
                 i++;
             }
@@ -93,7 +93,7 @@ int main() {
     }
     bool sn=true;
     for (int i=0; i<be.length(); i++) {
-        if (!isdigit(be[i])) {
+        if (!isdigit(be[i])&&be[i]!='.') {
             sn=false;
         }
     }
@@ -106,7 +106,7 @@ int main() {
     }
     stack<string> cs;
     string temp2;
-    long long val1=0,val2=0;
+    long double val1=0,val2=0;
     for (int i=0; i<be.length(); i++) {
         temp2="";
         if (isdigit(be[i])) {
@@ -116,9 +116,9 @@ int main() {
             }
             cs.push(temp2);
         }else{
-            val2=stoi(cs.top());
+            val2=stold(cs.top());
             cs.pop();
-            val1=stoi(cs.top());
+            val1=stold(cs.top());
             cs.pop();
             if (be[i]=='+') {
                 cs.push(to_string(val1+val2));
