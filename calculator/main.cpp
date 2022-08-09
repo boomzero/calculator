@@ -124,8 +124,8 @@ int main() {
                 cs.push(to_string(val1+val2));
             }else if (be[i]=='-') cs.push(to_string(val1-val2));
             else if (be[i]=='*') cs.push(to_string(val1*val2));
-            else if (be[i]=='/') cs.push(to_string((double)val1/val2));
-            else cs.push(to_string(pow(val1, val2)));
+            else if (be[i]=='/') cs.push(to_string((long double)val1/val2));
+            else cs.push(to_string((long double)pow(val1, val2)));
             i++;
         }
     }
