@@ -50,14 +50,14 @@ int main() {
     string temp;
     for (int i=0; i<expression.length(); i++) {
         temp="";
-        if (isdigit(expression[i])) {//This is a number
+        if (isdigit(expression[i])) {
             while (isdigit(expression[i])||expression[i]=='.') {
                 temp.push_back(expression[i]);
                 i++;
             }
             i--;
             s2.push(temp);
-        }else{//This is an operator
+        }else{
             if (s1.empty()||(s1.top()=="(")) {
                 if (!s1.empty()&&(expression[i]==')')&&s1.top()=="(") {
                     s1.pop();
