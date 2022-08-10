@@ -106,9 +106,9 @@ int main() {
     }
     if (sn) {
         cout<<be<<endl;
-#ifdef __WIN32
+        #ifdef __WIN32
         system("pause");
-#endif
+        #endif
         return 0;
     }
     stack<string> cs;
