@@ -50,3 +50,6 @@ jobs:
           echo "-1+1" | ./out
           echo "1+(-1)" | ./out
           echo "(((-2-1)*2+1)^2-1)/2" | ./out
+          echo "0.1-1" | ./out
+          echo "0.1-0.1" | ./out
+          echo "0.1^0.1" | ./out
