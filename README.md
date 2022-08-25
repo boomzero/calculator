@@ -4,11 +4,11 @@
 
 A calculator that calculates the value of a expression
 ## Example
-Sample Input:
+Input:
 ```
-(1+2)*3-4
+(0.1+2)*3-4
 ```
-Sample Output:
+Output:
 ```
-5
+2.3
 ```
