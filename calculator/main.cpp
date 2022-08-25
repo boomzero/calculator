@@ -39,11 +39,11 @@ int main() {
     stack<string> s2;
     string expression;
     cin>>expression;
-    if (expression[0]=='-') {
+    if (expression[0]=='-'||expression[0]=='+') {
         expression.insert(0, "0");
     }
     for (int i=1; i<expression.length(); i++) {
-        if (expression[i]=='-'&&expression[i-1]=='(') {
+        if ((expression[i]=='-'||expression[0]=='+')&&expression[i-1]=='(') {
             expression.insert(i, "0");
         }
     }
