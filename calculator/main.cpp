@@ -13,7 +13,6 @@ If not, see <https://www.gnu.org/licenses/>.
 #include <string>
 #include <cmath>
 #include <cctype>
-#include <cstdlib>
 #include <sstream>
 #include <iomanip>
 
