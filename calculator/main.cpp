@@ -24,7 +24,7 @@ string ldtos(long double val) {
     return ss.str();
 }
 
-int getPriority(string op) {
+int getPriority(const string &op) {
     if (op == "^") {
         return 3;
     } else if (op == "*" || op == "/") {
@@ -79,7 +79,7 @@ int main() {
                     }
                     s1.pop();
                 } else {
-                    while ((!s1.empty()) && !(getPriority(temp) > getPriority(s1.top()))) {
+                    while ((!s1.empty()) && getPriority(temp) <= getPriority(s1.top())) {
                         s2.push(s1.top());
                         s1.pop();
                     }
@@ -100,8 +100,8 @@ int main() {
         s2.pop();
     }
     bool sn = true;
-    for (int i = 0; i < be.length(); i++) {
-        if (!isdigit(be[i]) && be[i] != '.') {
+    for (char i: be) {
+        if (!isdigit(i) && i != '.') {
             sn = false;
         }
     }
@@ -114,7 +114,7 @@ int main() {
     }
     stack<string> cs;
     string temp2;
-    long double val1 = 0, val2 = 0;
+    long double val1, val2;
     for (int i = 0; i < be.length(); i++) {
         temp2 = "";
         if (isdigit(be[i])) {
