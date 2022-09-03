@@ -65,7 +65,7 @@ int main() {
                 } else {
                     if (expression[i]=='s'&&expression[i+1]=='q'){
                         i+=3;
-                        s1.push("r");
+                        s1.push("s");
                     }else {
                         temp = "";
                         temp.push_back(expression[i]);
