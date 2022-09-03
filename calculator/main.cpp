@@ -16,6 +16,7 @@ If not, see <https://www.gnu.org/licenses/>.
 #include <sstream>
 #include <iomanip>
 
+const long double PI = 3.141592653589793238462643383279502884197169399375105820974944592307816406286;
 using namespace std;
 
 string ldtos(long double val) {
@@ -25,7 +26,7 @@ string ldtos(long double val) {
 }
 
 int getPriority(const string &op) {
-    if (op == "^"||op=="sqrt") {
+    if (op == "^" || op == "sqrt") {
         return 3;
     } else if (op == "*" || op == "/") {
         return 2;
@@ -58,15 +59,18 @@ int main() {
             }
             i--;
             s2.push(temp);
+        } else if (expression[i]=='p'&&expression[i+1]=='i') {
+            i++;
+            s2.push(ldtos(PI));
         } else {
             if (s1.empty() || (s1.top() == "(")) {
                 if (!s1.empty() && (expression[i] == ')') && s1.top() == "(") {
                     s1.pop();
                 } else {
-                    if (expression[i]=='s'&&expression[i+1]=='q'){
-                        i+=3;
+                    if (expression[i] == 's' && expression[i + 1] == 'q') {
+                        i += 3;
                         s1.push("s");
-                    }else {
+                    } else {
                         temp = "";
                         temp.push_back(expression[i]);
                         s1.push(temp);
@@ -74,9 +78,9 @@ int main() {
                 }
             } else {
                 temp = "";
-                if (expression[i]=='s'&&expression[i+1]=='q'){
-                    temp="sqrt";
-                }else{
+                if (expression[i] == 's' && expression[i + 1] == 'q') {
+                    temp = "sqrt";
+                } else {
                     temp.push_back(expression[i]);
                 }
                 if (temp == "(") {
@@ -92,10 +96,10 @@ int main() {
                         s2.push(s1.top());
                         s1.pop();
                     }
-                    if (temp=="sqrt"){
+                    if (temp == "sqrt") {
                         s1.push("s");
-                        i+=3;
-                    }else {
+                        i += 3;
+                    } else {
                         s1.push(temp);
                     }
                 }
@@ -137,12 +141,12 @@ int main() {
                 i++;
             }
             cs.push(temp2);
-        }else if (isalpha(be[i])){
+        } else if (isalpha(be[i])) {
             val1 = stold(cs.top());
             cs.pop();
-            if (be[i]=='s') cs.push(ldtos(sqrt(val1)));
+            if (be[i] == 's') cs.push(ldtos(sqrt(val1)));
             i++;
-        }else {
+        } else {
             val2 = stold(cs.top());
             cs.pop();
             val1 = stold(cs.top());
