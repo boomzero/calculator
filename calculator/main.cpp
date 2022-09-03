@@ -40,7 +40,10 @@ int main() {
     stack<string> s1;
     stack<string> s2;
     string expression;
-    cin >> expression;
+    getline(cin,expression);
+    while (expression.find(' ')!=string::npos){
+        expression.erase(expression.find(' '),1);
+    }
     if (expression[0] == '-' || expression[0] == '+') {
         expression.insert(0, "0");
     }
