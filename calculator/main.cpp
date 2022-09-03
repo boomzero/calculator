@@ -137,14 +137,15 @@ int main() {
                 i++;
             }
             cs.push(temp2);
-        } else {
+        }else if (isalpha(be[i])){
+            i++;
+        }else {
             val2 = stold(cs.top());
             cs.pop();
             val1 = stold(cs.top());
             cs.pop();
-            if (be[i] == '+') {
-                cs.push(ldtos(val1 + val2));
-            } else if (be[i] == '-') cs.push(ldtos(val1 - val2));
+            if (be[i] == '+') cs.push(ldtos(val1 + val2));
+            else if (be[i] == '-') cs.push(ldtos(val1 - val2));
             else if (be[i] == '*') cs.push(ldtos(val1 * val2));
             else if (be[i] == '/') cs.push(ldtos((long double) val1 / val2));
             else cs.push(ldtos((long double) pow(val1, val2)));
