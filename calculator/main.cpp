@@ -138,6 +138,9 @@ int main() {
             }
             cs.push(temp2);
         }else if (isalpha(be[i])){
+            val1 = stold(cs.top());
+            cs.pop();
+            if (be[i]=='s') cs.push(ldtos(sqrt(val1)));
             i++;
         }else {
             val2 = stold(cs.top());
