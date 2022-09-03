@@ -25,7 +25,7 @@ string ldtos(long double val) {
 }
 
 int getPriority(const string &op) {
-    if (op == "^") {
+    if (op == "^"||op=="sqrt") {
         return 3;
     } else if (op == "*" || op == "/") {
         return 2;
@@ -63,13 +63,22 @@ int main() {
                 if (!s1.empty() && (expression[i] == ')') && s1.top() == "(") {
                     s1.pop();
                 } else {
-                    temp = "";
-                    temp.push_back(expression[i]);
-                    s1.push(temp);
+                    if (expression[i]=='s'&&expression[i+1]=='q'){
+                        i+=3;
+                        s1.push("r");
+                    }else {
+                        temp = "";
+                        temp.push_back(expression[i]);
+                        s1.push(temp);
+                    }
                 }
             } else {
                 temp = "";
-                temp.push_back(expression[i]);
+                if (expression[i]=='s'&&expression[i+1]=='q'){
+                    temp="sqrt";
+                }else{
+                    temp.push_back(expression[i]);
+                }
                 if (temp == "(") {
                     s1.push("(");
                 } else if (temp == ")") {
@@ -83,7 +92,12 @@ int main() {
                         s2.push(s1.top());
                         s1.pop();
                     }
-                    s1.push(temp);
+                    if (temp=="sqrt"){
+                        s1.push("s");
+                        i+=3;
+                    }else {
+                        s1.push(temp);
+                    }
                 }
             }
         }
