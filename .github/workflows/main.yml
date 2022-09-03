@@ -53,3 +53,5 @@ jobs:
           echo "0.1-1" | ./out
           echo "0.1-0.1" | ./out
           echo "0.1^0.1" | ./out
+          echo "sqrt9" | ./out
+          echo "sqrt(8+1)" | ./out
