@@ -5,6 +5,7 @@
 A smart calculator that calculates the value of a expression, it supports the following operators:
 
 \+ \- * / ^ sqrt
+
 pi=3.14159265358979
 ## Example
 Input:
