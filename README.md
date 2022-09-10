@@ -3,7 +3,7 @@
 [![Publish](https://github.com/Thomas311926/calculator/actions/workflows/publish.yml/badge.svg)](https://github.com/Thomas311926/calculator/actions/workflows/publish.yml)
 
 A smart calculator that calculates the value of a expression.
-
+***
 It supports the following operators:
 
 * \+
