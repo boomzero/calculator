@@ -32,7 +32,7 @@ jobs:
       - name : Basic Test
         run: |
           cd calculator
-          g++ -o -out -std=c++14 main.cpp
+          g++ -o out -std=c++14 main.cpp
           echo "1+1" | ./out
           echo "(1+1)" | ./out
           echo "1*1" | ./out
