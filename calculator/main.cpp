@@ -149,8 +149,8 @@ int main() {
             cs.pop();
             if (be[i] == 's') {
                 cs.push(ldtos(sqrt(val1)));
-                i++;
             }
+            i++;
         } else {
             val2 = stold(cs.top());
             cs.pop();
