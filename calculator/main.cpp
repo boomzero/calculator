@@ -26,14 +26,21 @@ string ldtos(long double val) {
 }
 
 int getPriority(const string &op) {
-    if (op == "^" || op == "sqrt") {
+    if (op == "^" || op == "sqrt" || op == "s") {
         return 3;
     } else if (op == "*" || op == "/") {
         return 2;
     } else if (op == "+" || op == "-") {
         return 1;
     }
-    return 0;
+    return -1;
+}
+
+bool isFloatingPointNumber(string in) {
+    for (char i: in) {
+        if (i == '.') return true;
+    }
+    return false;
 }
 
 int main() {
@@ -152,9 +159,11 @@ int main() {
             }
             i++;
         } else {
-            val2 = stold(cs.top());
+            if (isFloatingPointNumber(cs.top())) val2 = stold(cs.top());
+            else val2 = stoi(cs.top());
             cs.pop();
-            val1 = stold(cs.top());
+            if (isFloatingPointNumber(cs.top())) val1 = stold(cs.top());
+            else val1 = stoi(cs.top());
             cs.pop();
             if (be[i] == '+') cs.push(ldtos(val1 + val2));
             else if (be[i] == '-') cs.push(ldtos(val1 - val2));
