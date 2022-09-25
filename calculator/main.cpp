@@ -159,8 +159,8 @@ int main() {
             if (be[i] == '+') cs.push(ldtos(val1 + val2));
             else if (be[i] == '-') cs.push(ldtos(val1 - val2));
             else if (be[i] == '*') cs.push(ldtos(val1 * val2));
-            else if (be[i] == '/') cs.push(ldtos((long double) val1 / val2));
-            else cs.push(ldtos((long double) pow(val1, val2)));
+            else if (be[i] == '/') cs.push(ldtos(val1 / val2));
+            else cs.push(ldtos(pow(val1, val2)));
             i++;
         }
     }
