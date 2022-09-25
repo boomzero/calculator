@@ -14,7 +14,7 @@ It supports the following operators:
 * sqrt
 
 * pi=3.14159265358979
-## Example
+## Examples
 Input:
 ```
 (0.1+2)*3-4
