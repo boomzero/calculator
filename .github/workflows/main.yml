@@ -28,11 +28,11 @@ jobs:
       - name: Compile
         run: |
           cd calculator
-          g++ -o -std=c++14 out main.cpp
+          g++ -o out -std=c++14 main.cpp
       - name : Basic Test
         run: |
           cd calculator
-          g++ -o -std=c++14 out main.cpp
+          g++ -o -out -std=c++14 main.cpp
           echo "1+1" | ./out
           echo "(1+1)" | ./out
           echo "1*1" | ./out
@@ -41,7 +41,7 @@ jobs:
       - name : Advanced Test
         run: |
           cd calculator
-          g++ -o -std=c++14 out main.cpp
+          g++ -o out -std=c++14 main.cpp
           echo "((1+1))" | ./out
           echo "(1+1)*2" | ./out
           echo "(1+1)^2" | ./out
