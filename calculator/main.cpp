@@ -33,7 +33,7 @@ int getPriority(const string &op) {
     } else if (op == "+" || op == "-") {
         return 1;
     }
-    return -1;
+    return 0;
 }
 
 bool isFloatingPointNumber(string in) {
