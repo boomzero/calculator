@@ -40,9 +40,9 @@ int main() {
     stack<string> s1;
     stack<string> s2;
     string expression;
-    getline(cin,expression);
-    while (expression.find(' ')!=string::npos){
-        expression.erase(expression.find(' '),1);
+    getline(cin, expression);
+    while (expression.find(' ') != string::npos) {
+        expression.erase(expression.find(' '), 1);
     }
     if (expression[0] == '-' || expression[0] == '+') {
         expression.insert(0, "0");
@@ -62,7 +62,7 @@ int main() {
             }
             i--;
             s2.push(temp);
-        } else if (expression[i]=='p'&&expression[i+1]=='i') {
+        } else if (expression[i] == 'p' && expression[i + 1] == 'i') {
             i++;
             s2.push(ldtos(PI));
         } else {
@@ -147,8 +147,10 @@ int main() {
         } else if (isalpha(be[i])) {
             val1 = stold(cs.top());
             cs.pop();
-            if (be[i] == 's') cs.push(ldtos(sqrt(val1)));
-            i++;
+            if (be[i] == 's') {
+                cs.push(ldtos(sqrt(val1)));
+                i++;
+            }
         } else {
             val2 = stold(cs.top());
             cs.pop();
