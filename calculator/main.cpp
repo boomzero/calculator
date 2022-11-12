@@ -80,9 +80,6 @@ int main() {
                 if (!s1.empty() && (expression[i] == ')') && s1.top() == "(") {
                     s1.pop();
                 } else {
-                    if (temp == "(" || temp == ")") {
-                        throw runtime_error("Parentheses do not match!");
-                    }
                     if (expression[i] == 's' && expression[i + 1] == 'q') {
                         i += 3;
                         s1.push("s");
@@ -105,9 +102,6 @@ int main() {
                     while (s1.top() != "(") {
                         s2.push(s1.top());
                         s1.pop();
-                        if (s1.empty()) {
-                            throw runtime_error("Parentheses do not match!");
-                        }
                     }
                     s1.pop();
                 } else {
@@ -119,9 +113,6 @@ int main() {
                         s1.push("s");
                         i += 3;
                     } else {
-                        if (temp == "(" || temp == ")") {
-                            throw runtime_error("Parentheses do not match!");
-                        }
                         s1.push(temp);
                     }
                 }
