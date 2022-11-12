@@ -15,6 +15,7 @@ If not, see <https://www.gnu.org/licenses/>.
 #include <cctype>
 #include <sstream>
 #include <iomanip>
+#include <assert.h>
 
 const long double PI = 3.141592653589793238462643383279502884197169399375105820974944592307816406286;
 using namespace std;
@@ -80,6 +81,13 @@ int main() {
                 if (!s1.empty() && (expression[i] == ')') && s1.top() == "(") {
                     s1.pop();
                 } else {
+                    if(temp=="("||temp==")"){
+                            throw("Parentheses do not match!");
+                            #ifdef __WIN32
+                                system("pause");
+                            #endif
+                            abort();
+                    }
                     if (expression[i] == 's' && expression[i + 1] == 'q') {
                         i += 3;
                         s1.push("s");
@@ -102,6 +110,9 @@ int main() {
                     while (s1.top() != "(") {
                         s2.push(s1.top());
                         s1.pop();
+                        if(s1.empty()){
+                            throw("Parentheses do not match!");
+                        }
                     }
                     s1.pop();
                 } else {
@@ -113,6 +124,9 @@ int main() {
                         s1.push("s");
                         i += 3;
                     } else {
+                        if(temp=="("||temp==")"){
+                            throw("Parentheses do not match!");
+                        }
                         s1.push(temp);
                     }
                 }
@@ -142,6 +156,9 @@ int main() {
         system("pause");
 #endif
         return 0;
+    }
+    if (be.find("(")!=string::npos||be.find(")")!=string::npos){
+        throw("Parentheses do not match!");
     }
     stack<string> cs;
     string temp2;
