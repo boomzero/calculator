@@ -57,6 +57,9 @@ int main() {
     for (int i = 1; i < expression.length(); i++) {
         if ((expression[i] == '-' || expression[0] == '+') && expression[i - 1] == '(') {
             expression.insert(i, "0");
+        } else if (expression[i] == '-' && expression[i-1] == '^'){
+            expression.insert(i,"(0");
+            expression.insert(i+4,")");
         }
     }
     string temp;
