@@ -144,6 +144,10 @@ int main() {
         return 0;
     }
     if (be.find("(") != string::npos || be.find(")") != string::npos) {
+#ifdef __WIN32
+        cerr << "Parentheses do not match!" << endl;
+        system("pause");
+#endif
         throw runtime_error("Parentheses do not match!");
     }
     stack <string> cs;
