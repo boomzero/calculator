@@ -15,7 +15,6 @@ If not, see <https://www.gnu.org/licenses/>.
 #include <cctype>
 #include <sstream>
 #include <iomanip>
-#include <assert.h>
 
 const long double PI = 3.141592653589793238462643383279502884197169399375105820974944592307816406286;
 using namespace std;
@@ -45,8 +44,8 @@ bool isFloatingPointNumber(string in) {
 }
 
 int main() {
-    stack<string> s1;
-    stack<string> s2;
+    stack <string> s1;
+    stack <string> s2;
     string expression;
     getline(cin, expression);
     while (expression.find(' ') != string::npos) {
@@ -58,9 +57,9 @@ int main() {
     for (int i = 1; i < expression.length(); i++) {
         if ((expression[i] == '-' || expression[0] == '+') && expression[i - 1] == '(') {
             expression.insert(i, "0");
-        } else if (expression[i] == '-' && expression[i-1] == '^'){
-            expression.insert(i,"(0");
-            expression.insert(i+4,")");
+        } else if (expression[i] == '-' && expression[i - 1] == '^') {
+            expression.insert(i, "(0");
+            expression.insert(i + 4, ")");
         }
     }
     string temp;
@@ -81,13 +80,6 @@ int main() {
                 if (!s1.empty() && (expression[i] == ')') && s1.top() == "(") {
                     s1.pop();
                 } else {
-                    if(temp=="("||temp==")"){
-                            throw("Parentheses do not match!");
-                            #ifdef __WIN32
-                                system("pause");
-                            #endif
-                            abort();
-                    }
                     if (expression[i] == 's' && expression[i + 1] == 'q') {
                         i += 3;
                         s1.push("s");
@@ -110,9 +102,6 @@ int main() {
                     while (s1.top() != "(") {
                         s2.push(s1.top());
                         s1.pop();
-                        if(s1.empty()){
-                            throw("Parentheses do not match!");
-                        }
                     }
                     s1.pop();
                 } else {
@@ -124,9 +113,6 @@ int main() {
                         s1.push("s");
                         i += 3;
                     } else {
-                        if(temp=="("||temp==")"){
-                            throw("Parentheses do not match!");
-                        }
                         s1.push(temp);
                     }
                 }
@@ -157,10 +143,14 @@ int main() {
 #endif
         return 0;
     }
-    if (be.find("(")!=string::npos||be.find(")")!=string::npos){
-        throw("Parentheses do not match!");
+    if (be.find("(") != string::npos || be.find(")") != string::npos) {
+#ifdef __WIN32
+        cerr << "Parentheses do not match!" << endl;
+        system("pause");
+#endif
+        throw runtime_error("Parentheses do not match!");
     }
-    stack<string> cs;
+    stack <string> cs;
     string temp2;
     long double val1, val2;
     for (int i = 0; i < be.length(); i++) {
