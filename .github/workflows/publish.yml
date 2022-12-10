@@ -13,8 +13,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build
       run: |
-        cd calculator
-        g++ -o ../calc -O1 -std=c++14 main.cpp
+        g++ -o ./calc -O1 -std=c++14 main.cpp
     - name: Upload binaries to release
       uses: svenstaro/upload-release-action@v2
       with:
@@ -26,13 +25,11 @@ jobs:
   build-macos:
     name: Publish macOS binaries
     runs-on: macos-12
-
     steps:
     - uses: actions/checkout@v2
     - name: Build
       run: |
-        cd calculator
-        g++ -o ../calc -O1 -std=c++14 main.cpp
+        g++ -o ./calc -O1 -std=c++14 main.cpp
     - name: Upload binaries to release
       uses: svenstaro/upload-release-action@v2
       with:
@@ -65,8 +62,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build
       run: |
-        cd calculator
-        g++ -o ../calc -O1 -std=c++14 main.cpp
+        g++ -o ./calc -O1 -std=c++14 main.cpp
     - name: Upload binaries to release
       uses: svenstaro/upload-release-action@v2
       with:
