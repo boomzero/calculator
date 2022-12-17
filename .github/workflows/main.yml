@@ -27,30 +27,33 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Compile
         run: |
-          g++ -o out -std=c++14 main.cpp
+          cmake ./
+          cmake build ./
       - name : Basic Test
         run: |
-          g++ -o out -std=c++14 main.cpp
-          echo "1+1" | ./out
-          echo "(1+1)" | ./out
-          echo "1*1" | ./out
-          echo "3/2" | ./out
-          echo "1-2" | ./out
+          cmake ./
+          cmake build ./
+          echo "1+1" | ./calculator
+          echo "(1+1)" | ./calculator
+          echo "1*1" | ./calculator
+          echo "3/2" | ./calculator
+          echo "1-2" | ./calculator
       - name : Advanced Test
         run: |
-          g++ -o out -std=c++14 main.cpp
-          echo "((1+1))" | ./out
-          echo "(1+1)*2" | ./out
-          echo "(1+1)^2" | ./out
-          echo "((2-1)*2+1)^2" | ./out
-          echo "(((2-1)*2+1)^2-1)/2" | ./out
-          echo "-1+1" | ./out
-          echo "1+(-1)" | ./out
-          echo "(((-2-1)*2+1)^2-1)/2" | ./out
-          echo "0.1-1" | ./out
-          echo "0.1-0.1" | ./out
-          echo "0.1^0.1" | ./out
-          echo "sqrt9" | ./out
-          echo "sqrt(8+1)" | ./out
-          echo "8^(1/3)" | ./out
-          echo "8^-1" | ./out
+          cmake ./
+          cmake build ./
+          echo "((1+1))" | ./calculator
+          echo "(1+1)*2" | ./calculator
+          echo "(1+1)^2" | ./calculator
+          echo "((2-1)*2+1)^2" | ./calculator
+          echo "(((2-1)*2+1)^2-1)/2" | ./calculator
+          echo "-1+1" | ./calculator
+          echo "1+(-1)" | ./calculator
+          echo "(((-2-1)*2+1)^2-1)/2" | ./calculator
+          echo "0.1-1" | ./calculator
+          echo "0.1-0.1" | ./calculator
+          echo "0.1^0.1" | ./calculator
+          echo "sqrt9" | ./calculator
+          echo "sqrt(8+1)" | ./calculator
+          echo "8^(1/3)" | ./calculator
+          echo "8^-1" | ./calculator
