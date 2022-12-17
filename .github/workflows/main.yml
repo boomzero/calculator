@@ -33,6 +33,7 @@ jobs:
         run: |
           cmake ./
           cmake build ./
+          ls
           echo "1+1" | ./calculator
           echo "(1+1)" | ./calculator
           echo "1*1" | ./calculator
