@@ -48,7 +48,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build
       run: |
-        cmake ./
+        cmake -G "Unix Makefiles" ./
         make
     - name: Upload binaries to release
       uses: svenstaro/upload-release-action@v2
