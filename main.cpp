@@ -36,20 +36,13 @@ int getPriority(const string &op) {
     if (op == "(" || op == ")") {
         return 0;
     }
-    string err="Unknown operator: ";
+    string err = "Unknown operator: ";
     err.append(op);
 #ifdef __WIN32
     cerr << err << endl;
     system("pause");
 #endif
     throw runtime_error(err.c_str());
-}
-
-bool isFloatingPointNumber(string in) {
-    for (char i: in) {
-        if (i == '.') return true;
-    }
-    return false;
 }
 
 int main() {
@@ -178,11 +171,9 @@ int main() {
             }
             i++;
         } else {
-            if (isFloatingPointNumber(cs.top())) val2 = stold(cs.top());
-            else val2 = stoi(cs.top());
+            val2 = stold(cs.top());
             cs.pop();
-            if (isFloatingPointNumber(cs.top())) val1 = stold(cs.top());
-            else val1 = stoi(cs.top());
+            val1 = stold(cs.top());
             cs.pop();
             if (be[i] == '+') cs.push(ldtos(val1 + val2));
             else if (be[i] == '-') cs.push(ldtos(val1 - val2));
