@@ -19,7 +19,7 @@ If not, see <https://www.gnu.org/licenses/>.
 const long double PI = 3.141592653589793238462643383279502884197169399375105820974944592307816406286;
 using namespace std;
 
-string ldtos(long double val) {
+string toString(long double val) {
     std::stringstream ss;
     ss << std::setprecision(15) << val;
     return ss.str();
@@ -76,7 +76,7 @@ int main() {
             s2.push(temp);
         } else if (expression[i] == 'p' && expression[i + 1] == 'i') {
             i++;
-            s2.push(ldtos(PI));
+            s2.push(toString(PI));
         } else {
             if (s1.empty() || (s1.top() == "(")) {
                 if (!s1.empty() && (expression[i] == ')') && s1.top() == "(") {
@@ -84,7 +84,7 @@ int main() {
                 } else {
                     if (expression[i] == 's' && expression[i + 1] == 'q') {
                         i += 3;
-                        s1.push("s");
+                        s1.emplace("s");
                     } else {
                         temp = "";
                         temp.push_back(expression[i]);
@@ -99,7 +99,7 @@ int main() {
                     temp.push_back(expression[i]);
                 }
                 if (temp == "(") {
-                    s1.push("(");
+                    s1.emplace("(");
                 } else if (temp == ")") {
                     while (s1.top() != "(") {
                         s2.push(s1.top());
@@ -112,7 +112,7 @@ int main() {
                         s1.pop();
                     }
                     if (temp == "sqrt") {
-                        s1.push("s");
+                        s1.emplace("s");
                         i += 3;
                     } else {
                         s1.push(temp);
@@ -167,7 +167,7 @@ int main() {
             val1 = stold(cs.top());
             cs.pop();
             if (be[i] == 's') {
-                cs.push(ldtos(sqrt(val1)));
+                cs.push(toString(sqrt(val1)));
             }
             i++;
         } else {
@@ -175,11 +175,11 @@ int main() {
             cs.pop();
             val1 = stold(cs.top());
             cs.pop();
-            if (be[i] == '+') cs.push(ldtos(val1 + val2));
-            else if (be[i] == '-') cs.push(ldtos(val1 - val2));
-            else if (be[i] == '*') cs.push(ldtos(val1 * val2));
-            else if (be[i] == '/') cs.push(ldtos(val1 / val2));
-            else cs.push(ldtos(pow(val1, val2)));
+            if (be[i] == '+') cs.push(toString(val1 + val2));
+            else if (be[i] == '-') cs.push(toString(val1 - val2));
+            else if (be[i] == '*') cs.push(toString(val1 * val2));
+            else if (be[i] == '/') cs.push(toString(val1 / val2));
+            else cs.push(toString(pow(val1, val2)));
             i++;
         }
     }
