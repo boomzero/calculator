@@ -178,11 +178,9 @@ int main() {
             }
             i++;
         } else {
-            if (isFloatingPointNumber(cs.top())) val2 = stold(cs.top());
-            else val2 = stoi(cs.top());
+            val2 = stold(cs.top());
             cs.pop();
-            if (isFloatingPointNumber(cs.top())) val1 = stold(cs.top());
-            else val1 = stoi(cs.top());
+            val1 = stold(cs.top());
             cs.pop();
             if (be[i] == '+') cs.push(ldtos(val1 + val2));
             else if (be[i] == '-') cs.push(ldtos(val1 - val2));
