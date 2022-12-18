@@ -1,3 +1,4 @@
 calculator.xcodeproj
 calculator/main
 /.DS_Store
+/cmake-build-debug
