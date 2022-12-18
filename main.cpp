@@ -33,7 +33,16 @@ int getPriority(const string &op) {
     } else if (op == "+" || op == "-") {
         return 1;
     }
-    return 0;
+    if (op == "(" || op == ")") {
+        return 0;
+    }
+    string err="Unknown operator: ";
+    err.append(op);
+#ifdef __WIN32
+    cerr << err << endl;
+    system("pause");
+#endif
+    throw runtime_error(err.c_str());
 }
 
 bool isFloatingPointNumber(string in) {
@@ -44,8 +53,8 @@ bool isFloatingPointNumber(string in) {
 }
 
 int main() {
-    stack <string> s1;
-    stack <string> s2;
+    stack<string> s1;
+    stack<string> s2;
     string expression;
     getline(cin, expression);
     while (expression.find(' ') != string::npos) {
@@ -143,14 +152,14 @@ int main() {
 #endif
         return 0;
     }
-    if (be.find("(") != string::npos || be.find(")") != string::npos) {
+    if (be.find('(') != string::npos || be.find(')') != string::npos) {
 #ifdef __WIN32
         cerr << "Parentheses do not match!" << endl;
         system("pause");
 #endif
         throw runtime_error("Parentheses do not match!");
     }
-    stack <string> cs;
+    stack<string> cs;
     string temp2;
     long double val1, val2;
     for (int i = 0; i < be.length(); i++) {
