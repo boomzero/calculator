@@ -48,7 +48,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build
       run: |
-        g++.exe -o ./calc.exe -O1 -static -std=c++14 calculator/main.cpp
+        g++.exe -o ./calc.exe -O1 -static -std=c++14 main.cpp
     - name: Upload binaries to release
       uses: svenstaro/upload-release-action@v2
       with:
