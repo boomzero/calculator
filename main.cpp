@@ -164,15 +164,41 @@ int main() {
             }
             cs.push(temp2);
         } else if (isalpha(be[i])) {
-            val1 = stold(cs.top());
+            if (!cs.empty()) {
+                val1 = stold(cs.top());
+            } else {
+#ifdef __WIN32
+                cerr << "Invalid input!" << endl;
+                system("pause");
+#endif
+                throw runtime_error("Invalid input!");
+            }
             cs.pop();
             if (be[i] == 's') {
                 cs.push(toString(sqrt(val1)));
             }
             i++;
         } else {
+            if (!cs.empty()) {
+                val1 = stold(cs.top());
+            } else {
+#ifdef __WIN32
+                cerr << "Invalid input!" << endl;
+                system("pause");
+#endif
+                throw runtime_error("Invalid input!");
+            }
             val2 = stold(cs.top());
             cs.pop();
+            if (!cs.empty()) {
+                val1 = stold(cs.top());
+            } else {
+#ifdef __WIN32
+                cerr << "Invalid input!" << endl;
+                system("pause");
+#endif
+                throw runtime_error("Invalid input!");
+            }
             val1 = stold(cs.top());
             cs.pop();
             if (be[i] == '+') cs.push(toString(val1 + val2));
