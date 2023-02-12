@@ -1,0 +1,3 @@
+/Users/chenqi/CLionProjects/calculator/CMakeFiles/calculator.dir
+/Users/chenqi/CLionProjects/calculator/CMakeFiles/edit_cache.dir
+/Users/chenqi/CLionProjects/calculator/CMakeFiles/rebuild_cache.dir
