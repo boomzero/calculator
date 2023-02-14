@@ -15,7 +15,8 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -30,7 +31,8 @@
 					"name" : "calculator",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -41,6 +43,13 @@
 					"id" : "calculator::@6890427a1f51a3e7e1df",
 					"jsonFile" : "target-calculator-Debug-9c396cdd7913be68b36d.json",
 					"name" : "calculator",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "checker::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-checker-Debug-d197420fc1617f730ac6.json",
+					"name" : "checker",
 					"projectIndex" : 0
 				}
 			]
