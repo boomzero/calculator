@@ -21,11 +21,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="949598fc-b092-4bb7-8933-a5acce5d3d0d" name="Changes" comment="add more tests">
-      <change afterPath="$PROJECT_DIR$/testdata/13.ans" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testdata/14.ans" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testdata/15.ans" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testdata/16.ans" afterDir="false" />
+    <list default="true" id="949598fc-b092-4bb7-8933-a5acce5d3d0d" name="Changes" comment="upd">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -291,7 +288,35 @@
       <option name="project" value="LOCAL" />
       <updated>1676375664117</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="finish adding tests">
+      <created>1676375946077</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1676375946077</updated>
+    </task>
+    <task id="LOCAL-00028" summary="upd">
+      <created>1676377682123</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1676377682123</updated>
+    </task>
+    <task id="LOCAL-00029" summary="upd">
+      <created>1676377942415</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1676377942415</updated>
+    </task>
+    <task id="LOCAL-00030" summary="upd">
+      <created>1676379677871</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1676379677871</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -322,10 +347,11 @@
     <MESSAGE value="update bulid" />
     <MESSAGE value="test" />
     <MESSAGE value="remove ls" />
-    <MESSAGE value="upd" />
     <MESSAGE value="initial POC" />
     <MESSAGE value="upd build files" />
     <MESSAGE value="add more tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="add more tests" />
+    <MESSAGE value="finish adding tests" />
+    <MESSAGE value="upd" />
+    <option name="LAST_COMMIT_MESSAGE" value="upd" />
   </component>
 </project>
