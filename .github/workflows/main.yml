@@ -28,6 +28,7 @@ jobs:
       - name: Compile
         run: |
           git submodule init
+          ls
           cmake ./
           make
       - name : Basic Test
