@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="CMakePresetLoader">{
   &quot;useNewFormat&quot;: true
 }</component>
@@ -8,6 +11,7 @@
   </component>
   <component name="CMakeRunConfigurationManager">
     <generated>
+      <config projectName="calculator" targetName="checker" />
       <config projectName="calculator" targetName="calculator" />
     </generated>
   </component>
@@ -17,12 +21,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="949598fc-b092-4bb7-8933-a5acce5d3d0d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/calculator" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+    <list default="true" id="949598fc-b092-4bb7-8933-a5acce5d3d0d" name="Changes" comment="add more tests">
+      <change afterPath="$PROJECT_DIR$/testdata/13.ans" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testdata/14.ans" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testdata/15.ans" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testdata/16.ans" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,37 +36,49 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="add-base" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectApplicationVersion">
     <option name="ide" value="CLion" />
     <option name="majorVersion" value="2022" />
     <option name="minorVersion" value="3.2" />
   </component>
   <component name="ProjectId" id="2LdmStjPVbjqOYhYaWNt3XKviMo" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "language.cpp.clang-tidy",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+}</component>
+  <component name="RunManager" selected="CMake Application.checker">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="calculator" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="calculator" TARGET_NAME="calculator" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="calculator" RUN_TARGET_NAME="calculator">
@@ -71,6 +86,15 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="checker" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="calculator" TARGET_NAME="checker" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="calculator" RUN_TARGET_NAME="checker">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.calculator" />
+      <item itemvalue="CMake Application.checker" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -83,11 +107,225 @@
       <workItem from="1676209339418" duration="70000" />
       <workItem from="1676209420749" duration="201000" />
       <workItem from="1676209640861" duration="23000" />
-      <workItem from="1676209688655" duration="357000" />
+      <workItem from="1676209688655" duration="1645000" />
     </task>
+    <task id="LOCAL-00001" summary="check if expression is valid">
+      <created>1676210070496</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1676210070496</updated>
+    </task>
+    <task id="LOCAL-00002" summary="check if expression is valid">
+      <created>1676210086036</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1676210086036</updated>
+    </task>
+    <task id="LOCAL-00003" summary="remove useless code">
+      <created>1676210591098</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1676210591098</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add base functions">
+      <created>1676349763119</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1676349763119</updated>
+    </task>
+    <task id="LOCAL-00005" summary="fix stuff">
+      <created>1676350044143</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1676350044143</updated>
+    </task>
+    <task id="LOCAL-00006" summary="fix warnings">
+      <created>1676351084266</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1676351084266</updated>
+    </task>
+    <task id="LOCAL-00007" summary="add checker">
+      <created>1676363474992</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1676363474992</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add checker">
+      <created>1676363707285</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1676363707285</updated>
+    </task>
+    <task id="LOCAL-00009" summary="update metadata">
+      <created>1676371019007</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1676371019007</updated>
+    </task>
+    <task id="LOCAL-00010" summary="update metadata">
+      <created>1676371024375</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1676371024375</updated>
+    </task>
+    <task id="LOCAL-00011" summary="rewrite checker">
+      <created>1676371741187</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1676371741187</updated>
+    </task>
+    <task id="LOCAL-00012" summary="rewrite checker">
+      <created>1676371746907</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1676371746907</updated>
+    </task>
+    <task id="LOCAL-00013" summary="rewrite checker">
+      <created>1676371899487</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1676371899487</updated>
+    </task>
+    <task id="LOCAL-00014" summary="update data">
+      <created>1676372638538</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1676372638538</updated>
+    </task>
+    <task id="LOCAL-00015" summary="update data">
+      <created>1676372643472</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1676372643472</updated>
+    </task>
+    <task id="LOCAL-00016" summary="update bulid">
+      <created>1676373112424</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1676373112424</updated>
+    </task>
+    <task id="LOCAL-00017" summary="update bulid">
+      <created>1676373228438</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1676373228438</updated>
+    </task>
+    <task id="LOCAL-00018" summary="test">
+      <created>1676373317718</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1676373317719</updated>
+    </task>
+    <task id="LOCAL-00019" summary="test">
+      <created>1676373405781</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1676373405781</updated>
+    </task>
+    <task id="LOCAL-00020" summary="upd">
+      <created>1676373526511</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1676373526511</updated>
+    </task>
+    <task id="LOCAL-00021" summary="remove ls">
+      <created>1676373583538</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1676373583538</updated>
+    </task>
+    <task id="LOCAL-00022" summary="upd">
+      <created>1676373638726</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1676373638726</updated>
+    </task>
+    <task id="LOCAL-00023" summary="upd">
+      <created>1676373643359</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1676373643359</updated>
+    </task>
+    <task id="LOCAL-00024" summary="initial POC">
+      <created>1676375320846</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1676375320846</updated>
+    </task>
+    <task id="LOCAL-00025" summary="upd build files">
+      <created>1676375486714</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1676375486714</updated>
+    </task>
+    <task id="LOCAL-00026" summary="add more tests">
+      <created>1676375664117</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1676375664117</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="check if expression is valid" />
+    <MESSAGE value="remove useless code" />
+    <MESSAGE value="add base functions" />
+    <MESSAGE value="fix stuff" />
+    <MESSAGE value="fix warnings" />
+    <MESSAGE value="add checker" />
+    <MESSAGE value="update metadata" />
+    <MESSAGE value="rewrite checker" />
+    <MESSAGE value="update data" />
+    <MESSAGE value="update bulid" />
+    <MESSAGE value="test" />
+    <MESSAGE value="remove ls" />
+    <MESSAGE value="upd" />
+    <MESSAGE value="initial POC" />
+    <MESSAGE value="upd build files" />
+    <MESSAGE value="add more tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="add more tests" />
   </component>
 </project>

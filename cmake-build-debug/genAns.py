@@ -1,0 +1,1 @@
+print(1+1, file=open('ans.txt', 'w'))
