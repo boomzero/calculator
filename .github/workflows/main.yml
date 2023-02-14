@@ -27,7 +27,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Compile
         run: |
-          git submodule update
+          git submodule init
           cmake ./
           make
       - name : Basic Test
