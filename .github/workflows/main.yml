@@ -55,10 +55,14 @@ jobs:
           ./checker testdata/in out.txt testdata/7.ans
           echo "(1+1)^2" | ./calculator > out.txt
           ./checker testdata/in out.txt testdata/8.ans
-          echo "((2-1)*2+1)^2" | ./calculator
-          echo "(((2-1)*2+1)^2-1)/2" | ./calculator
-          echo "-1+1" | ./calculator
-          echo "1+(-1)" | ./calculator
+          echo "((2-1)*2+1)^2" | ./calculator > out.txt
+          ./checker testdata/in out.txt testdata/9.ans
+          echo "(((2-1)*2+1)^2-1)/2" | ./calculator > out.txt
+          ./checker testdata/in out.txt testdata/10.ans
+          echo "-1+1" | ./calculator > out.txt
+          ./checker testdata/in out.txt testdata/11.ans
+          echo "1+(-1)" | ./calculator > out.txt
+          ./checker testdata/in out.txt testdata/12.ans
           echo "(((-2-1)*2+1)^2-1)/2" | ./calculator
           echo "0.1-1" | ./calculator
           echo "0.1-0.1" | ./calculator
