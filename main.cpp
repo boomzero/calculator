@@ -88,7 +88,7 @@ namespace b {
     }
 
     void print(num in) {
-        for (int i = in.size() - 1; i >= 0; i--) {
+        for (auto i = in.size() - 1; i >= 0; i--) {
             if (in[i] > 9) {
                 cout << char(in[i] - 10 + 'A');
             } else {
@@ -101,7 +101,7 @@ namespace b {
         num n;
         string in;
         cin >> in;
-        for (int i = in.size() - 1; i >= 0; i--) {
+        for (auto i = in.size() - 1; i >= 0; i--) {
             if (isalpha(in[i])) {
                 n.push_back(in[i] - 'A' + 10);
             } else {
