@@ -21,7 +21,14 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="949598fc-b092-4bb7-8933-a5acce5d3d0d" name="Changes" comment="merge" />
+    <list default="true" id="949598fc-b092-4bb7-8933-a5acce5d3d0d" name="Changes" comment="update metadata">
+      <change beforePath="$PROJECT_DIR$/checker.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/checker.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/checker.dir/checker.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/checker" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/checker" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -156,7 +163,21 @@
       <option name="project" value="LOCAL" />
       <updated>1676363707285</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="update metadata">
+      <created>1676371019007</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1676371019007</updated>
+    </task>
+    <task id="LOCAL-00010" summary="update metadata">
+      <created>1676371024375</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1676371024375</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,6 +201,7 @@
     <MESSAGE value="fix stuff" />
     <MESSAGE value="fix warnings" />
     <MESSAGE value="add checker" />
-    <option name="LAST_COMMIT_MESSAGE" value="add checker" />
+    <MESSAGE value="update metadata" />
+    <option name="LAST_COMMIT_MESSAGE" value="update metadata" />
   </component>
 </project>
