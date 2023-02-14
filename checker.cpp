@@ -8,22 +8,14 @@ See the GNU General Public License for more details.
 You should have received a copy of the GNU General Public License along with this program.
 If not, see <https://www.gnu.org/licenses/>.
 */
-#include <iostream>
-#include <cstdio>
-#include <fstream>
-#include <sstream>
-using namespace std;
-ifstream fi("ans.txt");
+#include "testlib/testlib.h"
 
-int main() {
-    string expr;
-    cin >> expr;
-    stringstream c;
-    c<<"echo $(("<<expr<<")) > ans.txt";
-    system(c.str().c_str());
-    string cmd = "echo ";
-    cmd.append(expr);
-    cmd.append("| ./calculator > out.txt");
-    system(cmd.c_str());
-    return system("diff ans.txt out.txt");
+int main(int argc, char *argv[]) {
+    setName("calculator checker");
+    registerTestlibCmd(argc, argv);
+    double an = ans.readDouble();
+    double out = ouf.readDouble();
+    if (abs(an - out) > 0.00001)
+        quitf(_wa, "expected %f, found %f", an, out);
+    quitf(_ok, "answer is %f", out);
 }

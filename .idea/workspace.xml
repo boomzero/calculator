@@ -21,7 +21,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="949598fc-b092-4bb7-8933-a5acce5d3d0d" name="Changes" comment="merge" />
+    <list default="true" id="949598fc-b092-4bb7-8933-a5acce5d3d0d" name="Changes" comment="rewrite checker" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -156,7 +156,35 @@
       <option name="project" value="LOCAL" />
       <updated>1676363707285</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="update metadata">
+      <created>1676371019007</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1676371019007</updated>
+    </task>
+    <task id="LOCAL-00010" summary="update metadata">
+      <created>1676371024375</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1676371024375</updated>
+    </task>
+    <task id="LOCAL-00011" summary="rewrite checker">
+      <created>1676371741187</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1676371741187</updated>
+    </task>
+    <task id="LOCAL-00012" summary="rewrite checker">
+      <created>1676371746907</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1676371746907</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,6 +208,8 @@
     <MESSAGE value="fix stuff" />
     <MESSAGE value="fix warnings" />
     <MESSAGE value="add checker" />
-    <option name="LAST_COMMIT_MESSAGE" value="add checker" />
+    <MESSAGE value="update metadata" />
+    <MESSAGE value="rewrite checker" />
+    <option name="LAST_COMMIT_MESSAGE" value="rewrite checker" />
   </component>
 </project>
