@@ -35,18 +35,26 @@ jobs:
         run: |
           cmake ./
           make
-          echo "1+1" | ./calculator
-          echo "(1+1)" | ./calculator
-          echo "1*1" | ./calculator
-          echo "3/2" | ./calculator
-          echo "1-2" | ./calculator
+          echo "1+1" | ./calculator > out.txt
+          ./checker testdata/in out.txt testdata/1.ans
+          echo "(1+1)" | ./calculator > out.txt
+          ./checker testdata/in out.txt testdata/2.ans
+          echo "1*1" | ./calculator > out.txt
+          ./checker testdata/in out.txt testdata/3.ans
+          echo "3/2" | ./calculator > out.txt
+          ./checker testdata/in out.txt testdata/4.ans
+          echo "1-2" | ./calculator > out.txt
+          ./checker testdata/in out.txt testdata/5.ans
       - name : Advanced Test
         run: |
           cmake ./
           cmake build ./
-          echo "((1+1))" | ./calculator
-          echo "(1+1)*2" | ./calculator
-          echo "(1+1)^2" | ./calculator
+          echo "((1+1))" | ./calculator > out.txt
+          ./checker testdata/in out.txt testdata/6.ans
+          echo "(1+1)*2" | ./calculator > out.txt
+          ./checker testdata/in out.txt testdata/7.ans
+          echo "(1+1)^2" | ./calculator > out.txt
+          ./checker testdata/in out.txt testdata/8.ans
           echo "((2-1)*2+1)^2" | ./calculator
           echo "(((2-1)*2+1)^2-1)/2" | ./calculator
           echo "-1+1" | ./calculator
