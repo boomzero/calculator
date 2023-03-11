@@ -22,6 +22,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="949598fc-b092-4bb7-8933-a5acce5d3d0d" name="Changes" comment="upd">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,11 +74,6 @@
   }
 }</component>
   <component name="RunManager" selected="CMake Application.checker">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="calculator" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="calculator" TARGET_NAME="calculator" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="calculator" RUN_TARGET_NAME="calculator">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -105,6 +101,7 @@
       <workItem from="1676209420749" duration="201000" />
       <workItem from="1676209640861" duration="23000" />
       <workItem from="1676209688655" duration="1645000" />
+      <workItem from="1678517702967" duration="9000" />
     </task>
     <task id="LOCAL-00001" summary="check if expression is valid">
       <created>1676210070496</created>
@@ -316,7 +313,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676379677871</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="upd">
+      <created>1676463462370</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1676463462370</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

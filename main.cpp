@@ -15,7 +15,7 @@ If not, see <https://www.gnu.org/licenses/>.
 #include <cctype>
 #include <sstream>
 #include <iomanip>
-#include <vector>
+//#include <vector>
 
 const long double PI = 3.141592653589793238462643383279502884197169399375105820974944592307816406286;
 using namespace std;
@@ -46,72 +46,72 @@ int getPriority(const string &op) {
     throw runtime_error(err.c_str());
 }
 
-typedef vector<int> num;
-namespace b {
-    void upd(num &in, int conv) {
-        for (int i = 0; i < in.size(); i++) {
-            if (in[i] >= conv) {
-                if (i + 1 == in.size()) {
-                    in.resize(in.size() + 1);
-                }
-                in[i + 1] += in[i] / conv;
-                in[i] %= conv;
-            }
-        }
-    }
-
-    num add(num a, num b, int conv) {
-        num ans;
-        for (int i = 0; i < max(a.size(), b.size()); i++) {
-            if (a.size() > b.size()) {
-                if (b.size() - 1 < i) {
-                    ans.push_back(a[i]);
-                } else {
-                    ans.push_back(a[i] + b[i]);
-                }
-            } else {
-                if (a.size() - 1 < i) {
-                    ans.push_back(b[i]);
-                } else {
-                    ans.push_back(a[i] + b[i]);
-                }
-            }
-        }
-        upd(ans, conv);
-        return ans;
-    }
-
-    num init() {
-        num n;
-        n.push_back(0);
-        return n;
-    }
-
-    void print(num in) {
-        for (auto i = in.size() - 1; i >= 0; i--) {
-            if (in[i] > 9) {
-                cout << char(in[i] - 10 + 'A');
-            } else {
-                cout << in[i];
-            }
-        }
-    }
-
-    num input(int conv) {
-        num n;
-        string in;
-        cin >> in;
-        for (auto i = in.size() - 1; i >= 0; i--) {
-            if (isalpha(in[i])) {
-                n.push_back(in[i] - 'A' + 10);
-            } else {
-                n.push_back(in[i] - '0');
-            }
-        }
-        upd(n, conv);
-        return n;
-    }
-}
+//typedef vector<int> num;
+//namespace b {
+//    void upd(num &in, int conv) {
+//        for (int i = 0; i < in.size(); i++) {
+//            if (in[i] >= conv) {
+//                if (i + 1 == in.size()) {
+//                    in.resize(in.size() + 1);
+//                }
+//                in[i + 1] += in[i] / conv;
+//                in[i] %= conv;
+//            }
+//        }
+//    }
+//
+//    num add(num a, num b, int conv) {
+//        num ans;
+//        for (int i = 0; i < max(a.size(), b.size()); i++) {
+//            if (a.size() > b.size()) {
+//                if (b.size() - 1 < i) {
+//                    ans.push_back(a[i]);
+//                } else {
+//                    ans.push_back(a[i] + b[i]);
+//                }
+//            } else {
+//                if (a.size() - 1 < i) {
+//                    ans.push_back(b[i]);
+//                } else {
+//                    ans.push_back(a[i] + b[i]);
+//                }
+//            }
+//        }
+//        upd(ans, conv);
+//        return ans;
+//    }
+//
+//    num init() {
+//        num n;
+//        n.push_back(0);
+//        return n;
+//    }
+//
+//    void print(num in) {
+//        for (auto i = in.size() - 1; i >= 0; i--) {
+//            if (in[i] > 9) {
+//                cout << char(in[i] - 10 + 'A');
+//            } else {
+//                cout << in[i];
+//            }
+//        }
+//    }
+//
+//    num input(int conv) {
+//        num n;
+//        string in;
+//        cin >> in;
+//        for (auto i = in.size() - 1; i >= 0; i--) {
+//            if (isalpha(in[i])) {
+//                n.push_back(in[i] - 'A' + 10);
+//            } else {
+//                n.push_back(in[i] - '0');
+//            }
+//        }
+//        upd(n, conv);
+//        return n;
+//    }
+//}
 
 int main() {
     stack<string> s1;
@@ -119,16 +119,16 @@ int main() {
     string expression;
     getline(cin, expression);
     while (expression.find(' ') != string::npos) {
-        expression.erase(expression.find(' '), 1);
+        expression.erase(expression.find(' '), 1); //remove spaces
     }
     if (expression[0] == '-' || expression[0] == '+') {
-        expression.insert(0, "0");
+        expression.insert(0, "0"); //allow +n and -n
     }
     for (int i = 1; i < expression.length(); i++) {
         if ((expression[i] == '-' || expression[0] == '+') && expression[i - 1] == '(') {
-            expression.insert(i, "0");
+            expression.insert(i, "0"); //allow (+n) and (-n)
         } else if (expression[i] == '-' && expression[i - 1] == '^') {
-            expression.insert(i, "(0");
+            expression.insert(i, "(0"); //allow n^-n
             expression.insert(i + 4, ")");
         }
     }
