@@ -135,7 +135,7 @@ int main() {
         } else if (expr[i] == '-' && expr[i - 1] == '^') {
             expr.insert(i, "(0"); //allow n^-n
             expr.insert(i + 4, ")");
-        } else if (expr[i] == '(' && (!isOp(expr[i - 1]) || expr[i - 1] == ')')) {
+        } else if (expr[i] == '(' && (/*isOp(expr[i - 1]) ||*/ expr[i - 1] == ')')) {
             expr.insert(i, "*");
         }
     }
