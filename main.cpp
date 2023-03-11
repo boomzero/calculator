@@ -116,55 +116,55 @@ int getPriority(const string &op) {
 int main() {
     stack<string> s1;
     stack<string> s2;
-    string expression;
-    getline(cin, expression);
-    while (expression.find(' ') != string::npos) {
-        expression.erase(expression.find(' '), 1); //remove spaces
+    string expr;
+    getline(cin, expr);
+    while (expr.find(' ') != string::npos) {
+        expr.erase(expr.find(' '), 1); //remove spaces
     }
-    if (expression[0] == '-' || expression[0] == '+') {
-        expression.insert(0, "0"); //allow +n and -n
+    if (expr[0] == '-' || expr[0] == '+') {
+        expr.insert(0, "0"); //allow +n and -n
     }
-    for (int i = 1; i < expression.length(); i++) {
-        if ((expression[i] == '-' || expression[0] == '+') && expression[i - 1] == '(') {
-            expression.insert(i, "0"); //allow (+n) and (-n)
-        } else if (expression[i] == '-' && expression[i - 1] == '^') {
-            expression.insert(i, "(0"); //allow n^-n
-            expression.insert(i + 4, ")");
+    for (int i = 1; i < expr.length(); i++) {
+        if ((expr[i] == '-' || expr[0] == '+') && expr[i - 1] == '(') {
+            expr.insert(i, "0"); //allow (+n) and (-n)
+        } else if (expr[i] == '-' && expr[i - 1] == '^') {
+            expr.insert(i, "(0"); //allow n^-n
+            expr.insert(i + 4, ")");
         }
     }
     string temp;
-    for (int i = 0; i < expression.length(); i++) {
+    for (int i = 0; i < expr.length(); i++) {
         temp = "";
-        if (isdigit(expression[i])) {
-            while (isdigit(expression[i]) || expression[i] == '.') {
-                temp.push_back(expression[i]);
+        if (isdigit(expr[i])) {
+            while (isdigit(expr[i]) || expr[i] == '.') {
+                temp.push_back(expr[i]);
                 i++;
             }
             i--;
             s2.push(temp);
-        } else if (expression[i] == 'p' && expression[i + 1] == 'i') {
+        } else if (expr[i] == 'p' && expr[i + 1] == 'i') {
             i++;
             s2.push(toString(PI));
         } else {
             if (s1.empty() || (s1.top() == "(")) {
-                if (!s1.empty() && (expression[i] == ')') && s1.top() == "(") {
+                if (!s1.empty() && (expr[i] == ')') && s1.top() == "(") {
                     s1.pop();
                 } else {
-                    if (expression[i] == 's' && expression[i + 1] == 'q') {
+                    if (expr[i] == 's' && expr[i + 1] == 'q') {
                         i += 3;
                         s1.emplace("s");
                     } else {
                         temp = "";
-                        temp.push_back(expression[i]);
+                        temp.push_back(expr[i]);
                         s1.push(temp);
                     }
                 }
             } else {
                 temp = "";
-                if (expression[i] == 's' && expression[i + 1] == 'q') {
+                if (expr[i] == 's' && expr[i + 1] == 'q') {
                     temp = "sqrt";
                 } else {
-                    temp.push_back(expression[i]);
+                    temp.push_back(expr[i]);
                 }
                 if (temp == "(") {
                     s1.emplace("(");

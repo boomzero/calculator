@@ -21,10 +21,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="949598fc-b092-4bb7-8933-a5acce5d3d0d" name="Changes" comment="upd">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="949598fc-b092-4bb7-8933-a5acce5d3d0d" name="Changes" comment="remove unnecessary code, add comments" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -73,7 +70,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="CMake Application.checker">
+  <component name="RunManager" selected="CMake Application.calculator">
     <configuration name="calculator" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="calculator" TARGET_NAME="calculator" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="calculator" RUN_TARGET_NAME="calculator">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -101,7 +98,7 @@
       <workItem from="1676209420749" duration="201000" />
       <workItem from="1676209640861" duration="23000" />
       <workItem from="1676209688655" duration="1645000" />
-      <workItem from="1678517702967" duration="9000" />
+      <workItem from="1678517702967" duration="417000" />
     </task>
     <task id="LOCAL-00001" summary="check if expression is valid">
       <created>1676210070496</created>
@@ -320,7 +317,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676463462370</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="remove unnecessary code, add comments">
+      <created>1678518118290</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1678518118290</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -356,6 +360,7 @@
     <MESSAGE value="add more tests" />
     <MESSAGE value="finish adding tests" />
     <MESSAGE value="upd" />
-    <option name="LAST_COMMIT_MESSAGE" value="upd" />
+    <MESSAGE value="remove unnecessary code, add comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove unnecessary code, add comments" />
   </component>
 </project>
