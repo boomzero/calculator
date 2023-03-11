@@ -79,3 +79,5 @@ jobs:
           ./checker testdata/in out.txt testdata/19.ans
           echo "8^-1" | ./calculator > out.txt
           ./checker testdata/in out.txt testdata/20.ans
+          echo "1+(+1+1)" | ./calculator > out.txt
+          ./checker testdata/in out.txt testdata/21.ans
