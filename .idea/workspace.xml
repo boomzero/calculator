@@ -21,7 +21,15 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="949598fc-b092-4bb7-8933-a5acce5d3d0d" name="Changes" comment="remove unnecessary code, add comments" />
+    <list default="true" id="949598fc-b092-4bb7-8933-a5acce5d3d0d" name="Changes" comment="rename expression to expr">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/calculator.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/calculator.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/calculator" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/calculator" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -98,7 +106,7 @@
       <workItem from="1676209420749" duration="201000" />
       <workItem from="1676209640861" duration="23000" />
       <workItem from="1676209688655" duration="1645000" />
-      <workItem from="1678517702967" duration="417000" />
+      <workItem from="1678517702967" duration="1700000" />
     </task>
     <task id="LOCAL-00001" summary="check if expression is valid">
       <created>1676210070496</created>
@@ -324,7 +332,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678518118290</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="rename expression to expr">
+      <created>1678518441423</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1678518441423</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -361,6 +376,7 @@
     <MESSAGE value="finish adding tests" />
     <MESSAGE value="upd" />
     <MESSAGE value="remove unnecessary code, add comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove unnecessary code, add comments" />
+    <MESSAGE value="rename expression to expr" />
+    <option name="LAST_COMMIT_MESSAGE" value="rename expression to expr" />
   </component>
 </project>

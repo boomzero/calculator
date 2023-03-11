@@ -118,6 +118,11 @@ int main() {
     stack<string> s2;
     string expr;
     getline(cin, expr);
+    auto isOp = [](char in) -> bool {
+        if (in == '+' || in == '-' || in == '*' || in == '/' || in == '^' || in == 's' || in == 't')
+            return true; //you should not just use s for sqrt
+        return false;
+    };
     while (expr.find(' ') != string::npos) {
         expr.erase(expr.find(' '), 1); //remove spaces
     }
@@ -125,11 +130,13 @@ int main() {
         expr.insert(0, "0"); //allow +n and -n
     }
     for (int i = 1; i < expr.length(); i++) {
-        if ((expr[i] == '-' || expr[0] == '+') && expr[i - 1] == '(') {
+        if ((expr[i] == '-' || expr[i] == '+') && expr[i - 1] == '(') {
             expr.insert(i, "0"); //allow (+n) and (-n)
         } else if (expr[i] == '-' && expr[i - 1] == '^') {
             expr.insert(i, "(0"); //allow n^-n
             expr.insert(i + 4, ")");
+        } else if (expr[i] == '(' && (/*isOp(expr[i - 1]) ||*/ expr[i - 1] == ')')) {
+            expr.insert(i, "*");
         }
     }
     string temp;
