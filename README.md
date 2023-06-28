@@ -31,3 +31,9 @@ Output:
 ```
 0.0025
 ```
+## Building
+```
+cmake ./
+make
+```
+This should build two binaries, calculator and checker. Checker is only used for unit tests.
