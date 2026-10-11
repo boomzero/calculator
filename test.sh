@@ -1,3 +1,15 @@
+#!/bin/sh
+set -e
+echo "1+1" | ./calculator > out.txt
+./checker testdata/in out.txt testdata/1.ans
+echo "(1+1)" | ./calculator > out.txt
+./checker testdata/in out.txt testdata/2.ans
+echo "1*1" | ./calculator > out.txt
+./checker testdata/in out.txt testdata/3.ans
+echo "3/2" | ./calculator > out.txt
+./checker testdata/in out.txt testdata/4.ans
+echo "1-2" | ./calculator > out.txt
+./checker testdata/in out.txt testdata/5.ans
 echo "((1+1))" | ./calculator > out.txt
 ./checker testdata/in out.txt testdata/6.ans
 echo "(1+1)*2" | ./calculator > out.txt
@@ -32,3 +44,4 @@ echo "1+(+1+1)" | ./calculator > out.txt
 ./checker testdata/in out.txt testdata/21.ans
 echo "2(2*2)" | ./calculator > out.txt
 ./checker testdata/in out.txt testdata/22.ans
+if echo "(1)2" | ./calculator 2>/dev/null; then …; exit 1; fi
