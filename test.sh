@@ -30,3 +30,5 @@ echo "8^-1" | ./calculator > out.txt
 ./checker testdata/in out.txt testdata/20.ans
 echo "1+(+1+1)" | ./calculator > out.txt
 ./checker testdata/in out.txt testdata/21.ans
+echo "2(2*2)" | ./calculator > out.txt
+./checker testdata/in out.txt testdata/22.ans
