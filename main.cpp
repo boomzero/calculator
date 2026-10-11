@@ -8,6 +8,7 @@ See the GNU General Public License for more details.
 You should have received a copy of the GNU General Public License along with this program.
 If not, see <https://www.gnu.org/licenses/>.
 */
+#include <cassert>
 #include <iostream>
 #include <stack>
 #include <string>
@@ -166,7 +167,7 @@ int main() {
     for (int i = 0; i < be.length(); i++) {
         temp2 = "";
         if (isdigit(be[i])) {
-            while (be[i] != ' ') {
+            while (be[i] != ' ' && i < be.length()) {
                 temp2.push_back(be[i]);
                 i++;
             }
@@ -211,6 +212,13 @@ int main() {
             else cs.push(toString(pow(val1, val2)));
             i++;
         }
+    }
+    if (cs.size() != 1) {
+#ifdef __WIN32
+        cerr << "Invalid input!" << endl;
+        system("pause");
+#endif
+        throw runtime_error("Invalid input!");
     }
     cout << cs.top() << endl;
 #ifdef __WIN32
