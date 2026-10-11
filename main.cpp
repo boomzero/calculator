@@ -167,7 +167,7 @@ int main() {
     for (int i = 0; i < be.length(); i++) {
         temp2 = "";
         if (isdigit(be[i])) {
-            while (be[i] != ' ' && i < be.length()) {
+            while (i < be.length() && be[i] != ' ') {
                 temp2.push_back(be[i]);
                 i++;
             }
